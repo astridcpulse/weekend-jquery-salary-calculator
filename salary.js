@@ -27,10 +27,20 @@ function addEmployee(event){
 }   
 
 function render(){
-    console.log('emp array', employeeArray);
 
-    $('#employee-table').append(`
-        "TEST"
-    `);
     
+    $('#employee-table').empty();
+    
+
+    for( let employee of employeeArray){
+        $('#employee-table').append(`
+            <tr>
+                <td>${employee.firstName}</td>
+                <td>${employee.lastName}</td>
+                <td>${employee.employeeID}</td>
+                <td>${employee.jobTitle}</td>
+                <td>${employee.annualSalary}</td>
+            </tr>
+        `);
+    }
 }
