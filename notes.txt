@@ -1,18 +1,18 @@
 Weekend Assignment
 
-[]input fields: 
+[x]input fields: 
     -employee first name
     -employee last name
     -ID number
     -job title
     -annual salary
-[] submit button
-    -TODO event handler to prevent auto refreshing the page
+[x] submit button
+   [x] -TODO event handler to prevent auto refreshing the page
 [] store information as an object, in an array
 [] delete button (delete row from DOM)
 [] calculate monthly costs
     -divide the total amount of employee salaries by 12 for monthly cost
-[] if total monthly > $20,000 then background of that element should turn red 
+[] if total monthly > 20,000 then background of that element should turn red 
     -will need style.css to style the red 
 [] append information to DOM in a table
 
