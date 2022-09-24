@@ -1,11 +1,16 @@
 $(document).ready(onReady);
 
 let employeeArray = [];
+let monthCost = 0;
 
 function onReady(){
     console.log('Ready Freddy!!!1!1!!!');
 
     $('#employee-info-form').on('submit', addEmployee);
+    // any button push, whether its the submit, or a delete button, should
+    // trigger costCruncher
+    $(':button').on('click', costCruncher)
+
 }
 
 function addEmployee(event){
@@ -26,6 +31,15 @@ function addEmployee(event){
     render();
 }   
 
+function costCruncher() {
+    console.log('CRUNCH');
+    for ( let person of employeeArray){
+        console.log(person.annualSalary);
+    }
+    
+
+}
+
 function render(){
 
     
@@ -43,4 +57,6 @@ function render(){
             </tr>
         `);
     }
+
+    // $('#total-monthly').append(`Total Monthly: ${monthCost}`);
 }
