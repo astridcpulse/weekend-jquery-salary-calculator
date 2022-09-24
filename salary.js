@@ -28,4 +28,9 @@ function addEmployee(event){
 
 function render(){
     console.log('emp array', employeeArray);
+
+    $('#employee-table').append(`
+        "TEST"
+    `);
+    
 }
