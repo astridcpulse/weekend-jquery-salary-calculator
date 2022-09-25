@@ -1,6 +1,47 @@
 body {
+    font-family: Helvetica, Arial, sans-serif;
     background-color: skyblue;
+    font-weight: 100;
 }
-/* #table-one{
-    border: 2px black;
-} */
+header, h1 {
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    vertical-align: text-bottom;
+    color: white;
+    padding: 28px 0px 1px 0px;
+    font-size: 46px;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 30px;
+}
+}
+table, tr, td {
+    border-collapse: collapse;
+    border: 2px solid;
+    width: 1000px;
+}
+
+th {
+    border: 2px solid;
+    background-color: lightgrey;
+}
+
+#total-monthly{
+    text-align: right;
+}
+
+button {
+    border-radius: 5px;
+}
+
+input {
+    box-sizing: border-box;
+    margin: 5px;
+    border: 2px solid;
+    padding: 10px 10px 4px 10px;
+    font-size: 19px;
+}

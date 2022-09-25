@@ -68,7 +68,7 @@ function render(){
                     <button class="removeEmp">
                         DELETE EMPLOYEE
                     </button>
-                <td>
+                </td>
             </tr>
         `);
     }
@@ -76,5 +76,5 @@ function render(){
         $('#total-monthly').css("background-color", "red");
     }
 
-    $('#total-monthly').text(`Total Monthly: ${monthCost}`);
+    $('#total-monthly').text(`Total Monthly: $${monthCost}`);
 }
