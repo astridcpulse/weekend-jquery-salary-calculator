@@ -15,6 +15,7 @@ function onReady(){
 function addEmployee(event){
     event.preventDefault();
 
+    
     // new employee info entered in field
     let newEmployee = {
         firstName: $('#first-name').val(),
@@ -23,7 +24,8 @@ function addEmployee(event){
         jobTitle: $('#job-title').val(),
         annualSalary: $('#annual-salary').val()
     }
-
+    //empty out the submit fields
+    $('#first-name, #last-name, #employee-id, #job-title, #annual-salary').val('');
     // push new employee object to array
     employeeArray.push(newEmployee);
     costCruncher();
