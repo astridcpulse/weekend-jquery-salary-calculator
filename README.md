@@ -12,18 +12,13 @@ Directly above this is how long it took you to develop the project. Your project
 
 A working html page for this project can be found ['here'](https://github.com/astridcpulse/weekend-jquery-salary-calculator)
 
-## Screen Shot
-
-Include one or two screen shots of your project here (optional). Remove if unused.
 
 ### Prerequisites
 
 jQuery.js sourced into the stack
 
 
-
 ## Usage
-How does someone use this application? Tell a user story here.
 
 1. Enter in an employees first name, last name, employee ID, job title, and annual salary
 2. Press Submit
