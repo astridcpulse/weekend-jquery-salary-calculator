@@ -7,9 +7,8 @@ function onReady(){
     console.log('Ready Freddy!!!1!1!!!');
 
     $('#employee-info-form').on('submit', addEmployee);
-    // any button push, whether its the submit, or a delete button, should
-    // trigger costCruncher
-    $(':button').on('click', costCruncher)
+    
+    $('#employee-table').on('click', '.removeEmp', deleteEmployee);
 
 }
 
@@ -27,19 +26,30 @@ function addEmployee(event){
 
     // push new employee object to array
     employeeArray.push(newEmployee);
+    costCruncher();
 
     render();
 }   
 
 function costCruncher() {
-    console.log('CRUNCH');
-    for ( let person of employeeArray){
-        console.log(person.annualSalary);
-    }
+    let tempVal = 0;
     
-
+    for ( let person of employeeArray){
+        tempVal += Number(person.annualSalary);
+        
+        //rounds the monthly cost to two decimal places
+        monthCost = (tempVal / 12).toFixed(2);
+    }
 }
 
+function deleteEmployee() {
+  
+    $(this).parent().parent().remove();
+    // if the employeeArray could be updated by the delete function, then simply running the costCruncher function would calculate the new monthly total
+    costCruncher();
+  }
+
+// render function contains all actions that display state to DOM
 function render(){
 
     
@@ -54,9 +64,17 @@ function render(){
                 <td>${employee.employeeID}</td>
                 <td>${employee.jobTitle}</td>
                 <td>${employee.annualSalary}</td>
+                <td> 
+                    <button class="removeEmp">
+                        DELETE EMPLOYEE
+                    </button>
+                <td>
             </tr>
         `);
     }
+    if (monthCost >= 20000){
+        $('#total-monthly').css("background-color", "red");
+    }
 
-    // $('#total-monthly').append(`Total Monthly: ${monthCost}`);
+    $('#total-monthly').text(`Total Monthly: ${monthCost}`);
 }
