@@ -20,6 +20,8 @@ h2 {
 }
 
 table, tr, td {
+    font-size: 19px;
+    font-weight: 500;
     border-collapse: collapse;
     border: 2px solid;
     width: 1000px;

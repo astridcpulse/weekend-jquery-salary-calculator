@@ -36,12 +36,9 @@ jQuery.js sourced into the stack
 ## Usage
 How does someone use this application? Tell a user story here.
 
-1. xxx
-2. xxx
-3. xxx
-4. xxx
-5. xxx
-6. xxx
+1. Enter in an employees first name, last name, employee ID, job title, and annual salary
+2. Press Submit
+3. Employee should show up in the Employees table, along with a delete button to remove them from the table
 
 
 ## Built With

@@ -52,10 +52,8 @@ function deleteEmployee() {
 // render function contains all actions that display state to DOM
 function render(){
 
-    
     $('#employee-table').empty();
     
-
     for( let employee of employeeArray){
         $('#employee-table').append(`
             <tr>
@@ -72,7 +70,8 @@ function render(){
             </tr>
         `);
     }
-    if (monthCost >= 20000){
+
+    if (monthCost > 20000){
         $('#total-monthly').css("background-color", "red");
     }
 
